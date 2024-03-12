@@ -1,0 +1,85 @@
+/* Reset default styles */
+:root {
+    --bg: #333;
+    --text: #dadada;
+    --border: #ccc;
+    --button-bg: #ccc;
+    --accent: #4b4b4b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a base font size and family */
+body {
+    background-color: var(--bg);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Add some spacing and styling to headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Add some padding and border to containers */
+.container {
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+/* Add some margin and padding to buttons */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* Add some spacing to paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Add some styling to links */
+a {
+    color: var(--text);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 1000;
+}
+
+nav {
+    padding: 10px;
+    background-color: var(--accent);
+    width: 20%;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+/* Add some hover effect to links */
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
