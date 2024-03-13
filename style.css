@@ -1,8 +1,8 @@
-/* Reset default styles */
+
 :root {
     --bg: #333;
     --text: #dadada;
-    --border: #ccc;
+    --border: #4b4b4b;
     --button-bg: #ccc;
     --accent: #4b4b4b;
 }
@@ -11,9 +11,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-/* Set a base font size and family */
+
 body {
     background-color: var(--bg);
     font-size: 16px;
@@ -28,19 +29,16 @@ body {
     margin: 0;
 }
 
-/* Add some spacing and styling to headings */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Add some padding and border to containers */
 .container {
     padding: 20px;
     border: 1px solid var(--border);
 }
 
-/* Add some margin and padding to buttons */
 button {
     margin: 10px;
     padding: 10px 20px;
@@ -50,12 +48,18 @@ button {
     cursor: pointer;
 }
 
-/* Add some spacing to paragraphs */
+
 p {
     margin-bottom: 10px;
+    opacity: 0.8;
+    transition: transform 1s, opacity 1s;
 }
 
-/* Add some styling to links */
+p:hover {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
 a {
     color: var(--text);
     text-decoration: none;
@@ -73,13 +77,96 @@ nav {
     border-radius: 100px;
     margin-top: 20px;
     margin-bottom: 100px;
+    transition: transform 1s, box-shadow 1s, scale 1s;
 }
 
-/* Add some hover effect to links */
+nav:hover {
+    box-shadow: 0 0 40px 0 var(--border);
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
 a:hover {
     text-decoration: underline;
 }
 
 li {
     list-style: none;
+}
+
+.textzone {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 1s, box-shadow 1s, scale 1s;
+    margin-bottom: 100px;
+}
+
+.textzone:hover {
+    box-shadow: 0 0 100px 0 var(--border);
+    transform: scale(1.02);
+    transition: 0.5s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 40px;
+    opacity: 0.8;
+    transform: scale(1);
+    transition: transform 1s, opacity 1s;
+}
+
+h1:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--text);
+}
+
+th {
+    background-color: var(--accent);
+    color: var(--text);
+    font-weight: bold;
+}
+
+@keyframes swipeDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
